@@ -1,0 +1,861 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input,
+button {
+    border: 0;
+    outline: none;
+}
+a {
+    color: gray;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+
+/* 第一行：快捷导航 */
+.shortcut {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(78, 81, 93);
+}
+.shortcut-center {
+    position: relative;
+    height: 100%;
+    /* background-color: blue; */
+}
+.shortcut .shortcut-left {
+    position: absolute;
+    top: 10px;
+    /* background-color: pink; */
+}
+.shortcut .shortcut-left li {
+    float: left;
+    margin-left: 10px;
+    font-size: 8px;
+    color: gray;
+}
+.shortcut .shortcut-left li a {
+    font-size: 10px;
+    text-align: center;
+}
+.shortcut-sign-in {
+    position: absolute;
+    right: 150px;
+    top: 8px;
+}
+.shortcut-sign-in li {
+    float: left;
+    margin-right: 5px;
+    color: gray;
+}
+.shortcut-sign-in a {
+    font-size: 14px;
+}
+.shortcut-shopping {
+    position: relative;
+    float: right;
+    /* background-color: pink; */
+    background-color: rgb(105, 103, 110);
+    width: 120px;
+    height: 100%;
+}
+.shortcut-shopping a::after {
+    content: " 购物车(0)";
+    font-family: 'icomoon';
+}
+.shortcut-shopping a {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}
+.shortcut-shopping:hover {
+    background-color: white;
+}
+.shortcut-center .shortcut-shopping a:hover {
+    color: red;
+}
+.shortcut-center a:hover {
+    color: white;
+}
+
+
+/* 第二行：header 头部 */
+.header {
+    position: relative;
+    /* background-color: pink; */
+    height: 100px;
+}
+.logo {
+    position: absolute;
+    top: 25px;
+    /* background-color: skyblue; */
+    width: 50px;
+    height: 50px;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+.header .hotwrods {
+    position: absolute;
+    left: 240px;
+    top: 40px;
+}
+.header .hotwrods li {
+    float: left;
+    margin-right: 15px;
+}
+.header .hotwrods li a {
+    color: black;
+}
+.header .hotwrods a:hover {
+    color: orangered;
+}
+.search {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    width: 280px;
+    height: 50px;
+    background-color: skyblue;
+}
+.search input {
+    height: 50px;
+    width: 230px;
+    border: 1px gray solid;
+    padding-left: 10px;
+}
+.search input:hover {
+    border-color: orange;
+}
+.search button {
+    float: right;
+    width: 50px;
+    height: 50px;
+    border: 1px gray solid;
+    font-size: 20px;
+    border-left: 0;
+}
+.search button::after {
+    content: "";
+    font-family: 'icomoon';
+}
+.search button:hover {
+    background-color: orange;
+    color: white;
+}
+
+.header-sklip {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    background-color: whitesmoke;
+    height: 0px;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.header:hover .header-sklip {
+    overflow: hidden;
+    height: 200px;
+    border-top: 1px solid gray;
+}
+
+.header-sklip ul {
+    transition: all .5s;
+}
+
+.header-sklip ul li {
+    float: left;
+    width: 100px;
+    height: 200px;
+    /* background-color: pink; */
+    margin: 0 50px;
+}
+
+.header-sklip ul li img {
+    width: 200px;
+    height: 140px;
+    border-right: 1px solid gray;
+    margin-left: -40px;
+}
+
+.header-sklip ul li:nth-child(6) img {
+    border-right: 0;
+}
+
+.header-sklip ul li p {
+    display: inline-block;
+    font-size: 12px;
+    color: black;
+    margin-left: 15px;
+}
+
+.header-sklip ul li p:last-child {
+    color: orangered;
+    margin-left: 25px;
+}
+
+
+/* 第三行：nav导航 */
+.nav {
+    height: 445px;
+    background-color: skyblue;
+}
+.nav .nav-words {
+    float: left;
+    width: 235px;
+    height: 100%;
+    background-color: rgb(125, 122, 120)
+}
+.nav .nav-words li {
+    padding: 11px;
+}
+.nav .nav-words li a {
+    margin-left: 10px;
+    color: white;
+    font-size: 14px;
+}
+.nav .nav-words li:hover {
+    background-color: orange;
+}
+.nav .nav-words a::after {
+    content: "";
+    font-family: 'icomoon';
+    float: right;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.nav .nav-bg {
+    float: right;
+    width: 965px;
+    height: 100%;
+}
+.nav .nav-bg a {
+    float: right;
+    width: 965px;
+    height: 100%;
+    background: url(../img/bg1.png);
+    transition: all 8s;
+    animation: bgBecome 15s linear infinite;
+}
+@keyframes bgBecome {
+    0% {
+        background: url(../img/bg1.png);
+    }
+    20% {
+        background: url(../img/bg1.png);
+    }
+    25% {
+        background: url(../img/bg2.png);
+    }
+    45% {
+        background: url(../img/bg2.png);
+    }
+    50% {
+        background: url(../img/bg3.png);
+    }
+    70% {
+        background: url(../img/bg3.png);
+    }
+    75% {
+        background: url(../img/bg4.png);
+    }
+    90% {
+        background: url(../img/bg1.png);
+    }
+    100% {
+        background: url(../img/bg1.png);
+    }
+}
+.nav .nav-bg .box1,
+.box2 {
+    width: 45px;
+    height: 80px;
+    /* background-color: pink; */
+    margin-top: 170px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 70px;
+    color: rgb(150, 141, 141, .5);
+}
+.nav .nav-bg .box1:hover,
+.box2:hover {
+    background-color: rgb(150, 141, 141, .5);
+    color: gray;
+}
+.nav .nav-bg ul {
+    margin-left: 840px;
+}
+.nav .nav-bg li {
+    float: left;
+    margin-top: 410px;
+    margin-left: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    border: 2px solid gray;
+    box-shadow: 0 0 5px;
+}
+.nav .nav-bg li:nth-child(1) {
+    background-color: pink;
+}
+
+
+/* 第四行：服务 */
+.service {
+    height: 180px;
+    margin-top: 15px;
+    /* background-color: seashell; */
+}
+.service .service-left {
+    float: left;
+    width: 235px;
+    height: 100%;
+    background-color: skyblue;
+}
+.service .service-left li {
+    float: left;
+    width: 78px;
+    height: 90px;
+    background-color: rgb(108, 100, 90);
+}
+.service .service-left li img {
+    width: 30px;
+    margin-top: 20px;
+}
+.service .service-left li a {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+}
+.service-right {
+    width: 965px;
+    height: 100%;
+    /* background-color: skyblue; */
+    float: left;
+}
+.service-right div {
+    float: left;
+    width: 300px;
+    height: 100%;
+    background-color: pink;
+    margin-left: 21px;
+}
+.service-right div img {
+    width: 300px;
+    height: 100%;
+}
+.service-right div img:hover {
+    box-shadow: 0 0 10px 0 gray;
+}
+.service-left a:hover {
+    color: white;
+}
+
+
+/* 第五行：长手机条(内容分隔图片)   第十三行：小米巨能写中性笔(内容分隔图片) */
+.divide {
+    margin-top: 20px;
+    height: 120px;
+    background-color: aqua;
+}
+.divide a img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 第六行：手机专栏(商品) */
+.goods {
+    margin-top: 20px;
+    height: 680px;
+    /* background-color: blanchedalmond; */
+}
+.goods .title1,
+.title2 {
+    float: left;
+    height: 60px;
+    width: 100%;
+    /* background-color: skyblue; */
+}
+.goods .title1 h2,
+.title2 h2 {
+    margin-top: 12px;
+    font-weight: normal;
+}
+.goods .title1 a {
+    float: right;
+    margin-top: 8px;
+    margin-right: 5px;
+    font-size: 16px;
+    color: black;
+}
+.goods .title1 a::after {
+    content: "";
+    font-family: 'icomoon';
+    margin-left: 5px;
+}
+.goods .title1 a:hover {
+    color: orangered;
+}
+.goods .gooods-box1 {
+    float: left;
+    width: 100%;
+    height: 620px;
+    /* background-color: pink; */
+}
+
+.gooods-box1 .box1-left {
+    float: left;
+    width: 220px;
+    height: 620px;
+    /* background-color: purple; */
+}
+.gooods-box1 .box1-right {
+    float: left;
+    margin-left: 10px;
+    width: 970px;
+    height: 100%;
+    /* background-color: rebeccapurple; */
+    /* 弹性布局： */
+    display: flex;
+    /* 水平平均对齐 */
+    justify-content: space-between;
+    /* 换行 */
+    flex-wrap: wrap;
+    /* 垂直平均对齐 */
+    align-content: space-between;
+}
+.gooods-box1 .box1-right div {
+    width: 235px;
+    height: 305px;
+    /* background-color: burlywood; */
+}
+.gooods-box1 img {
+    width: 100%;
+    height: 100%;
+}
+.gooods-box1 img:hover {
+    box-shadow: 0 0 10px 0 gray;
+}
+
+
+/* 第七行：智能穿戴(商品)   第八行：笔记本｜平板(商品) */
+.goods .title2 h2 a {
+    float: right;
+    margin-right: 20px;
+    font-size: 16px;
+    margin-top: 8px;
+    color: black;
+}
+.goods .title2 h2 a:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+.goods .gooods-box2 {
+    float: left;
+    width: 100%;
+    height: 620px;
+    /* background-color: pink; */
+}
+.gooods-box2 .box2-left {
+    float: left;
+    width: 220px;
+    height: 620px;
+    /* background-color: purple; */
+}
+.gooods-box2 .box2-right {
+    float: left;
+    /* margin-left: 10px; */
+    width: 980px;
+    height: 100%;
+    /* background-color: rebeccapurple; */
+}
+.gooods-box2 .box2-right .box2-right-small {
+    float: left;
+    margin-left: 10px;
+    width: 235px;
+    height: 305px;
+    /* background-color: pink; */
+}
+.gooods-box2 .box2-right .box2-right-small:nth-child(n+5) {
+    margin-top: 10px;
+}
+.box2-right-small-last1,
+.box2-right-small-last2 {
+    width: 100%;
+    height: 148px;
+}
+.box2-right-small-last2 {
+    position: relative;
+    margin-top: 9px;
+    /* background-color: palegreen; */
+}
+.box2-right-small-last2 div {
+    position: absolute;
+    top: 50px;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    /* background-color: bisque; */
+}
+.box2-right-small-last2 div a {
+    display: block;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.box2-right-small-last2 div a::after {
+    content: "";
+    font-family: 'icomoon';
+    color: orange;
+    font-size: 40px;
+    float: right;
+    margin-top: -5px;
+}
+.box2-left div,
+.box2-right div {
+    background-color: antiquewhite;
+}
+.gooods-box2 img {
+    width: 100%;
+    height: 100%;
+}
+.gooods-box2 img:hover,
+.box2-right-small-last2:hover {
+    box-shadow: 0 0 10px 0 gray;
+}
+
+
+/* 第十行：生活电器  第十一行：厨房电器  第十二行：智能家居 */
+.title-商品 {
+    width: 100%;
+    height: 60px;
+    /* background-color: skyblue; */
+}
+.title-商品 h2 {
+    font-weight: normal;
+    line-height: 60px;
+}
+.title-商品 a {
+    float: right;
+    font-size: 16px;
+    margin-right: 15px;
+    color: black;
+}
+.title-商品 a:hover {
+    text-decoration: underline;
+    color: orangered;
+}
+.goods-content {
+    width: 100%;
+    height: 620px;
+    /* background-color: palevioletred; */
+}
+.goods-content .small-total,
+.content-box {
+    width: 232px;
+    height: 305px;
+    float: left;
+    /* background-color: blue; */
+}
+.goods-content .content-box {
+    margin-left: 10px;
+}
+.goods-content div {
+    background-color: antiquewhite;
+}
+.goods-content div:nth-child(n-5) {
+    margin-bottom: 10px;
+}
+.goods-content .content-box img {
+    width: 50%;
+    height: 50%;
+    margin-left: 55px;
+}
+.goods-content .content-box h3 {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: normal;
+}
+.goods-content .content-box p {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.goods-content .content-box p:last-child {
+    font-size: 14px;
+    color: orange;
+}
+.goods-content .small-total img {
+    width: 100%;
+    height: 100%;
+}
+.goods-content div:hover {
+    box-shadow: 0 0 12px gray;
+}
+.goods-content .content-box:last-child {
+    background-color: transparent;
+}
+.goods-content .content-box:last-child:hover {
+    box-shadow: 0 0 0 0;
+}
+.content-box .content-box-div1,
+.content-box .content-box-div2 {
+    width: 100%;
+    height: 148px;
+    /* background-color: pink; */
+    overflow: hidden;
+}
+.content-box .content-box-div1 p {
+    text-align: left;
+    margin-left: 15px;
+    color: orange;
+    font-size: 14px;
+}
+.content-box-div1 p:nth-child(1) {
+    margin-top: 60px;
+    color: black;
+}
+.content-box-div1 img {
+    margin-top: -75px;
+    float: right;
+}
+.content-box .content-box-div2 a p {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.content-box .content-box-div2 a p:nth-child(1) {
+    margin-top: 55px;
+}
+.content-box-div2 a::after {
+    content: "";
+    font-family: 'icomoon';
+    float: right;
+    font-size: 40px;
+    color: orange;
+    margin-top: -60px;
+}
+
+
+/* 第十四行：尾部footer */
+.footer {
+    height: 680px;
+    margin-top: 30px;
+    /* background-color: antiquewhite; */
+}
+.mod_service {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    /* background-color: palevioletred; */
+    border-bottom: 1px solid gray;
+}
+.mod_service div {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    /* background-color: purple; */
+}
+.mod_service li {
+    float: left;
+    /* background-color: skyblue; */
+    border-right: 1px solid gray;
+}
+.mod_service li a {
+    font-size: 18px;
+    color: black;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+.mod_service li:nth-child(1) a::before {
+    content: "";
+    font-family: 'icomoon';
+}
+.mod_service li:nth-child(2) a::before {
+    content: "";
+    font-family: 'icomoon';
+}
+.mod_service li:nth-child(3) a::before {
+    content: "";
+    font-family: 'icomoon';
+}
+.mod_service li:nth-child(4) a::before {
+    content: "";
+    font-family: 'icomoon';
+}
+.mod_service li:nth-child(5) a::before {
+    content: "";
+    font-family: 'icomoon';
+}
+.mod_service a:hover {
+    color: orange;
+}
+.mod_help {
+    width: 100%;
+    height: 400px;
+    /* background-color: aqua; */
+    overflow: hidden;
+}
+.mod_help .col-links {
+    float: left;
+    height: 100%;
+    width: 170px;
+    /* background-color: pink; */
+    margin-top: 50px;
+}
+.mod_help .col-links:nth-child(1) {
+    margin-left: 130px;
+}
+.mod_help .col-links dt {
+    font-size: 16px;
+}
+.mod_help .col-links dd {
+    margin-top: 10px;
+}
+.mod_help .col-links dd a {
+    font-size: 8px;
+}
+.mod_help .col-links dd a:hover {
+    color: orangered;
+}
+.mod_help .col-contact {
+    float: left;
+    margin-top: 50px;
+    width: 220px;
+    height: 90px;
+    border-left: 1px gainsboro solid;
+    /* background-color: aquamarine; */
+}
+.mod_help .col-contact p {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.mod_help .col-contact p:nth-child(1) {
+
+    color: orangered;
+    font-size: 20px;
+}
+.mod_help .col-contact p:nth-child(2) {
+    font-size: 10px;
+}
+.mod_help .col-contact div {
+    margin: 0 auto;
+    width: 100px;
+    height: 30px;
+    border: 1px solid orange;
+    /* background-color: white; */
+}
+.mod_help .col-contact div a {
+    font-size: 10px;
+    color: orange;
+    margin-left: 20px;
+}
+.mod_help .col-contact div a::before {
+    content: "";
+    font-family: 'icomoon';
+}
+.mod_help .col-contact div:hover a,
+.mod_help .col-contact div:hover {
+    background-color: orange;
+    color: white;
+}
+.mod_copyright {
+    margin-top: 40px;
+    width: 100%;
+    height: 150px;
+    /* background-color: beige; */
+}
+.mod_copyright .logo2 {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+.mod_copyright .logo2 img {
+    width: 100%;
+    height: 100%;
+}
+.copyright-link {
+    width: 1120px;
+    height: 100%;
+    float: left;
+    margin-left: 20px;
+    /* background-color: pink; */
+}
+.copyright-link .sites {
+    font-size: 10px;
+}
+.copyright-link .sites a {
+    font-size: 10px;
+    color: black;
+}
+.copyright-link .sites a:hover {
+    color: orange;
+}
+.copyright-link .sites:nth-child(3) {
+    color: gray;
+}
+.copyright-link .copyright-imgs {
+    width: 100%;
+    height: 30px;
+}
+.copyright-link .copyright-imgs img {
+    float: left;
+    width: 100px;
+    height: 30px;
+}
+.copyright-link p:last-child {
+    color: rgba(151, 138, 138, 0.5);
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* 固定定位模版： */
+.fix-box {
+    position: fixed;
+    right: 90px;
+    bottom: 100px;
+    width: 30px;
+    height: 245px;
+    background-color: whitesmoke;
+}
+.fix-box li {
+    border: 1px wheat solid;
+}
+.fix-box img {
+    width: 20px;
+    height: 25px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.fix-box li:last-child {
+    margin-top: 25px;
+}
+.fix-box li:nth-child(-n+4) {
+    border-bottom: 0;
+}
+.fix-box li:hover {
+    background-color: blue;
+}

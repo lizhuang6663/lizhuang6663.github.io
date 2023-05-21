@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input,
+button {
+    border: 0;
+    outline: none;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+.app {
+    display: flex;
+}
+
+.register-bg {
+    width: 340px;
+    background-color: skyblue;
+}
+.bg-img{
+    background-image: url(../img/登录图片.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.register {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: pink; */
+}
+
+/* 右边第一行 */
+.register .header {
+    width: 100%;
+    height: 100px;
+    /* background-color: skyblue; */
+    border-top: 1px solid transparent;
+}
+
+.header img {
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.header span {
+    float: left;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.nav li {
+    float: right;
+    padding: 0 20px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.nav li:nth-child(1) {
+    border-left: 1px solid gray;
+}
+.nav li:nth-child(1) a::after {
+    content: "";
+    font-family: 'icomoon';
+    margin-left: 10px;
+}
+.nav li a:hover {
+    color: orangered;
+}
+
+/* 右边第二行 */
+.register .input {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 450px;
+    height: 600px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+}
+
+.input .sign-in {
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    height: 35px;
+    /* background-color: pink; */
+}
+
+.input .sign-in a {
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+.input .sign-in a:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+
+.QR-code {
+    position: absolute;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    border-top: 40px solid pink;
+    border-left: 40px solid transparent;
+    border-right: 40px solid pink;
+    border-bottom: 40px solid transparent;
+}
+
+.input form {
+    margin-top: 100px;
+}
+
+.input form input {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.input1 input {
+    width: 400px;
+}
+
+.input2 input {
+    float: left;
+    width: 330px;
+    border-right: 1px solid transparent;
+}
+
+.input1 input,
+.input2 input {
+    font-size: 16px;
+    padding-left: 20px;
+    color: gray;
+    height: 70px;
+}
+
+.eyes {
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+    font-family: 'icomoon';
+    background-color: white;
+    border: 1px white solid;
+    font-size: 25px;
+    text-align: center;
+    line-height: 70px;
+    color: gray;
+}
+.eyes:hover {
+    color: orangered;
+}
+
+.input form .input3 input {
+     width: 20px;
+     height: 20px;
+}
+
+.input3 span {
+     color: gray;
+}
+
+ .input3 a {
+     color: black;
+ }
+
+ .input4 input {
+    width: 400px;
+    height: 70px;
+    font-size: 20px;
+    color: white;
+    background-color: orange;
+ }
+
+ .help {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+ }
+
+ .help a:first-child {
+    float: left;
+    color: orange;
+
+ }
+
+ .help a:last-child {
+    float: right;
+    margin-right: 25px;
+    color: orange;
+ }
+
+ .other-sign-in {
+    margin-top: 80px;
+    margin-left: 180px;
+    font-size: 16px;
+    color: gray;
+ }
+
+ .other-sign-in-li li a {
+    font-family: 'icomoon';
+    float: left;
+    margin-left: 60px;
+    margin-top: 20px;
+    font-size: 40px;
+    color: orangered;
+ }
+
+ /* 右边第三行 */
+ .copyright {
+    position: absolute;
+        font-size: 10px;
+        color: gray;
+        left: 50%;
+        /* top: 50%; */
+        bottom: 0;
+        transform: translate(-50%, -50%);
+ }
+ 
